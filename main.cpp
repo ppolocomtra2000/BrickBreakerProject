@@ -147,6 +147,8 @@ public:
 					life--;
 					// set lại vị trí bóng và tốc độ như ban đầu
 					ball.setX((mapWidth / 2.0f) * Block);
+					// đặt ván hứng lại tốc độ ban đầu
+					pad.setSpeed(30.0f);
 					
 					ball.setY((mapHeight / 2.0f) * Block);
 					float fAngle = ((float)rand() / (float)(RAND_MAX)) * 3.14159f * 2.0f;
