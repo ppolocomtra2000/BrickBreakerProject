@@ -339,7 +339,7 @@ bool BrickBreaker::OnUserUpdate(float fElapsedTime) {
         for (int x = 0; x < m_nScreenWidth; x++)
             for (int y = 0; y < m_nScreenHeight; y++) {
                 int i = y * m_nScreenWidth + x;
-                m_bufScreen[m_nCurrentBuffer][i] = captured_screen[i];
+                m_bufScreen[i] = captured_screen[i];
             }
         // update menu
         active_menu->DrawMenu();
@@ -596,7 +596,7 @@ void BrickBreaker::CaptureScreen() {
     for (int x = 0; x < m_nScreenWidth; x++)
         for (int y = 0; y < m_nScreenHeight; y++) {
             int i = y * m_nScreenWidth + x;
-            captured_screen[i] = m_bufScreen[(m_nCurrentBuffer+1)%2][i];
+            captured_screen[i] = m_bufScreen[i];
         }
 }
 
